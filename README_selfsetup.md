@@ -150,7 +150,7 @@ B. Now we can run the script for CV-Inspector
 1. The main script is **cvinspector_monitor**. It has many parameters to pass in, so use `cvinspector_monitor --help` if need be.
 1. While the script is running, you can detach from screen if necessary using `CTRL+a then press d`.
 
-An example here: (this example can be used as is to run the example file `misc_data/example_label_input.csv`)
+An example here: (this example can be used as is to run the example file [misc_data/example_label_input.csv](https://github.com/UCI-Networking-Group/cv-inspector/blob/main/misc_data/example_label_input.csv))
 
 ```
 cvinspector_monitor --anticv_on False --trials 4 --beyond_landing_pages true --filter_list_paths filter_lists/easyprivacy.txt,filter_lists/disconnectme_abp.txt,filter_lists/getadmiral-domains.txt,filter_lists/antiadblockfilters.txt --classifier_path model/rf_model.sav --classifier_features_file_path model/features.txt --start_index 0 --end_index 2 --sites_csv misc_data/example_label_input.csv --output_directory /home/ubuntu/temp_output/detection_output/example_monitor/ --output_directory_ts /home/ubuntu/temp_output/detection_output/example_monitor_ts/ --output_suffix test_label --chrome_driver_path chromedriver/chromedriver78 --chrome_adblockplus_ext_abs_path /home/ubuntu/github/adblockpluschrome/devenv.chrome --by_rank false --log_level INFO
@@ -161,7 +161,7 @@ When the script finishes, it will print out where it outputs the last CSV with t
 **Important parameters to notice:**
 * `--anticv_on`: whether you want CV-Inspector to load the anti-cv list. If false, it will only rely on EasyList
 * `--filter_list_paths`: path to filterlists that you want to use to filter out traffic that you DO NOT care about
-* `--sites_csv`: the file that you want CV-Inspector to run on. An example is in `misc_data/example_label_input.csv`. Formatting must match that file
+* `--sites_csv`: the file that you want CV-Inspector to run on. An example is in [misc_data/example_label_input.csv](https://github.com/UCI-Networking-Group/cv-inspector/blob/main/misc_data/example_label_input.csv). Formatting must match that file
 * `--start_index` and `--end_index`: How many sites of the given file from `--sites_csv` do you want to crawl? For example, if the csv file has 100 sites and you only want to first test the first 10, then use `--start_index 0 --end_index 10`.
 * `--output_directory`: where the output will be
 * `--beyond_landing_pages`: if you want it to find a subpage to crawl as well.

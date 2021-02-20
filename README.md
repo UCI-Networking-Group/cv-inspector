@@ -4,7 +4,7 @@ Given a set of sites, CV-Inspector will automate the crawling, data collection, 
 * **Label 1** = the site was able to circumvent the adblocker 
 * **Label 0** = the site was not successful at circumventing the adblocker or it did not attempt at circumvention
 
-CV-Inspector was developed and used in the paper: **CV-Inspector: Towards Automating Detection of Adblock Circumvention**.
+CV-Inspector was developed and used in the paper: **[CV-Inspector: Towards Automating Detection of Adblock Circumvention](https://www.ndss-symposium.org/wp-content/uploads/2021-055b-paper.pdf)**.
 
 We refer to the paper for more details.
 
@@ -31,11 +31,11 @@ For **quick use**, you can use our AMI that has CV-Inspector set up already usin
 
 * [Request access to the AMI by filling out the form](https://athinagroup.eng.uci.edu/projects/cv-inspector/ami/)
     * You must have an existing AWS account. We will share the AMI directly with your account.
-* See the `README_AMI.md` For the AMI.
+* See the [README_AMI.md](https://github.com/UCI-Networking-Group/cv-inspector/blob/main/README_AMI.md) For the AMI.
 
 # Setting up CV-Inspector Yourself
 
-If you want to set up your own environment, see the `README_selfsetup.md`. 
+If you want to set up your own environment, see the [README_selfsetup.md](https://github.com/UCI-Networking-Group/cv-inspector/blob/main/README_selfsetup.md). 
 
 # Dependencies
 - [CV-Inspector Adblock Plus Chrome Extension](https://github.com/levanhieu-git/cv-inspector-adblockpluschrome): A custom version of Adblock Plus Chrome extension to annotate the page source
