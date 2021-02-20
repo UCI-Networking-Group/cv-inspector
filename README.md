@@ -29,7 +29,7 @@ We also encourage you to provide us ([athinagroupreleases@gmail.com](mailto:athi
 # Amazon Machine Image (AMI)
 For **quick use**, you can use our AMI that has CV-Inspector set up already using Ubuntu 18.04.3 LTS.
 
-* [Request access to the AMI by filling out the form](https://https://athinagroup.eng.uci.edu/projects/cv-inspector/ami/)
+* [Request access to the AMI by filling out the form](https://athinagroup.eng.uci.edu/projects/cv-inspector/ami/)
     * You must have an existing AWS account. We will share the AMI directly with your account.
 * See the `README_AMI.md` For the AMI.
 

@@ -22,7 +22,7 @@ If you create a publication (including web pages, papers published by a third pa
 We also encourage you to provide us ([athinagroupreleases@gmail.com](mailto:athinagroupreleases@gmail.com)) with a link to your publication. We use this information in reports to our funding agencies.
 
 # Accessing the AMI
-* [Request access to the AMI by filling out the form](https://https://athinagroup.eng.uci.edu/projects/cv-inspector/ami/)
+* [Request access to the AMI by filling out the form](https://athinagroup.eng.uci.edu/projects/cv-inspector/ami/)
   * You must have an existing AWS account. We will share the AMI directly with your account.
 * Use the AMI to launch an EC2 instance. Choose the configuration that is appropriate for your use case. In our paper, we use the `m5.2xlarge` instance.
 * Make sure to create your [EC2 key pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair)
