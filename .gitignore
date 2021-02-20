@@ -1,0 +1,6 @@
+.DS_store
+*.pyc
+*egg*
+node_modules
+.idea/**
+chromeext/*/build/**
