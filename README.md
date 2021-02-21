@@ -45,6 +45,14 @@ If you want to set up your own environment, see the [README_selfsetup.md](https:
 - `Python 3.6+`: CV-Inspector is built on top on Python 3.6
 - `setup.py`: List of Python packages
 
+# Terminology
+
+Throughout the code and datasets, you may see the following terms:
+
+- `control`: This commonly means the case for "No Adblocker"
+- `variant`: This commonly means the case for "With Adblocker"
+- `crawl_group_name`: Some unique identifier that holds together all data collected within one call of `cvinspector_monitor`.
+
 # License
 CV-Inspector is licensed under [Apache-2.0 License](https://www.apache.org/licenses/LICENSE-2.0).
 

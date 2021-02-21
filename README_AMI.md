@@ -44,7 +44,7 @@ When calling `cvinspector_monitor` (described later), it will use either EasyLis
 A. We need to start the local proxy that serves the static list of easylist and anti-cv list.
 
 1. Start a new screen : `screen -S abp_proxy`
-1. Activate the virtualenv: `source ~/virtualenv/cvinspector/bin/activate`
+1. Activate the virtualenv: `source ~/envs/cvinspector/bin/activate`
 1. `cd ~/github/cv-inspector/`
 1. start the proxy: `cvinspector_abp_proxy --filter_list_directory filter_lists`
 1. Detach from the screen: `CTRL+a then press d`
@@ -52,7 +52,7 @@ A. We need to start the local proxy that serves the static list of easylist and 
 B. Now we can run the script for CV-Inspector
 
 1. Start a new screen : `screen -S cvinspector`
-1. Activate the virtualenv: `source ~/virtualenv/cvinspector/bin/activate`
+1. Activate the virtualenv: `source ~/envs/cvinspector/bin/activate`
 1. `cd ~/github/cv-inspector/`
 1. The main script is **cvinspector_monitor**. It has many parameters to pass in, so use `cvinspector_monitor --help` if need be.
 1. While the script is running, you can detach from screen if necessary using `CTRL+a then press d`.
@@ -60,10 +60,10 @@ B. Now we can run the script for CV-Inspector
 An example here: (this example can be used as is to run the example file [misc_data/example_label_input.csv](https://github.com/UCI-Networking-Group/cv-inspector/blob/main/misc_data/example_label_input.csv))
 
 ```
-cvinspector_monitor --anticv_on True --trials 4 --beyond_landing_pages true --filter_list_paths filter_lists/easyprivacy.txt,filter_lists/disconnectme_abp.txt,filter_lists/getadmiral-domains.txt,filter_lists/antiadblockfilters.txt --classifier_path model/rf_model.sav --classifier_features_file_path model/features.txt --start_index 0 --end_index 2 --sites_csv misc_data/example_label_input.csv --output_directory /home/ubuntu/temp_output/detection_output/example_monitor/ --output_directory_ts /home/ubuntu/temp_output/detection_output/example_monitor_ts/ --output_suffix test_label --by_rank false --log_level INFO
+cvinspector_monitor --anticv_on False --trials 4 --beyond_landing_pages true --filter_list_paths filter_lists/easyprivacy.txt,filter_lists/disconnectme_abp.txt,filter_lists/getadmiral-domains.txt,filter_lists/antiadblockfilters.txt --classifier_path model/rf_model.sav --classifier_features_file_path model/features.txt --start_index 0 --end_index 2 --sites_csv misc_data/example_label_input.csv --output_directory /home/ubuntu/temp_output/detection_output/example_monitor/ --output_directory_ts /home/ubuntu/temp_output/detection_output/example_monitor_ts/ --output_suffix test_label --chrome_driver_path chromedriver/chromedriver78 --chrome_adblockplus_ext_abs_path /home/ubuntu/github/adblockpluschrome/devenv.chrome --by_rank false --log_level INFO
 ```
 
-When the script finishes, it will print out where it outputs the last CSV with the label results. Use the `cv_detect` column from the CSV to know whether it predicted `0 = No Circumvention` or `1 = Has Circumvention`
+**When the script finishes**, it will print out where it outputs the last CSV with the label results. Use the `cv_detect` column from the CSV to know whether it predicted `0 = No Circumvention` or `1 = Has Circumvention`
 
 **Important parameters to notice:**
 * `--anticv_on`: whether you want CV-Inspector to load the anti-cv list. If false, it will only rely on EasyList
@@ -79,7 +79,8 @@ When the script finishes, it will print out where it outputs the last CSV with t
 # Structure
 * `~/github/cv-inspector`: Holds the main code base for CV-Inspector
 * `~/github/adblockpluschrome`: Holds the instrumented code of Adblock Plus 3.7
-* `~/virtualenv`: Holds the virtualenvs that we created to run CV-Inspector
+* `~/github/cv-inspector-adblockpluschrome`: Holds the cv-inspector patch to Adblock Plus 3.7
+* `~/envs`: Holds the virtualenvs that we created to run CV-Inspector
 
 ## MongoDB
 Intermediate data is saved in mongodb to be audited, if necessary.

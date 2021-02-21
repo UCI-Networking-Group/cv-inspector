@@ -118,7 +118,7 @@ The below is an example of how you can call `cvinspector_create_chrome_profiles`
 ## Setup Ad-block Postprocessing
 Unfortunately, we cannot use nodeJS v14 to build the ad-block package.
 
-To build this AND run CV-Inspector, you must have nodeJS v10
+To build this AND run CV-Inspector, **you must have nodeJS v10** (assuming our environment is what we described in [Setup Overview](#setup-overview)).
 
 1. Purge what we have before: `sudo apt-get purge nodejs npm`
 1. `curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -`
