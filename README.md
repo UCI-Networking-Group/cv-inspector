@@ -10,6 +10,10 @@ We refer to the paper for more details.
 
 Visit our [CV-Inspector Project page](https://athinagroup.eng.uci.edu/projects/cv-inspector/) for more information, including datasets that we utilized in the paper.
 
+# Datasets
+
+Visit our [CV-Inspector Dataset page](https://athinagroup.eng.uci.edu/projects/cv-inspector/data/) for more information.
+
 # Citation
 If you create a publication (including web pages, papers published by a third party, and publicly available presentations) using CV-Inspector, please cite the corresponding paper as follows:
 ```
